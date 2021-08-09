@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2>ChatBot</h2>
+<p >{{ alert }}</p>
+
+<div class="container">
+  <img class="bottomright" class="center" src="{{ url_for('video_feed') }}">
+  <!-- <img class="bottomright" class="center" style="width: 500px;height: 300px;"src="{{ url_for('video_feed') }}"> -->
+  <div class="col-md-6 col-sm-6 col-xs-6"> <a href="touroku" class="btn btn-sm animated-button victoria-one">顔登録画面へ</a> </div>
+</div>
+
+<script>
+	(function($){
+		$.PeriodicalUpdater('/static/facedata.html',{
+			method: 'get',
+			minTimeout: 1000,
+			type: 'html',
+			multiplier:1,
+			maxCalls: 0
+		},
+			function(data){
+				//var data = data.split("\n");
+				//var data = data.join('n');
+				//var totalNumber = data.length;
+				//for(var i = 0; i < totalNumber; i++){
+				//	var row = data[i] + '<br>';
+					//$('#text').text(row);
+				//}
+					$('#text').text(data);
+			});
+		})(jQuery);
+
+	</script>
+検出情報
+<textarea readonly style="border:none;width:100%;height:500px;" id="text"></textarea>
+
+{% for item in names %}
+	<p>{{ item }}</p>
+{% endfor %}
+
+{% endblock %}

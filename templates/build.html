@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2>映像が映り始めたら</h2>
+<h2>カメラの正面に立って、レンズを見てください。</h2>
+<p >{{ alert }}</p>
+
+<div class="container">
+  <img class="bottomright" class="center" src="{{ url_for('video_build') }}">
+  <!-- <img class="bottomright" class="center" style="width: 500px;height: 300px;"src="{{ url_for('video_feed') }}">
+  <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/exec2" class="btn btn-sm animated-button victoria-one">Collt My Images</a> </div> -->
+  <div class="col-md-6 col-sm-6 col-xs-6">
+	  左の画面で「登録が終了しました」と表示されたら<br>
+	  <a href="finish" class="btn btn-sm animated-button victoria-one">ここをクリック</a> 
+  </div>
+</div>
+
+{% endblock %}

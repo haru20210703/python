@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2>名前を入力してください。</h2>
+<p >{{ alert }}</p>
+
+<div class="container">
+	<form action="output/" method="post">
+		<input type="text" name="name" required placeholder="山田 太郎"><br>
+		<input class="button" type="submit" value="顔登録に移る">
+	</form>
+	<a href="build">顔撮影へ<a>
+</div>
+{% endblock %}
