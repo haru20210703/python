@@ -1,0 +1,24 @@
+html{
+	font-size:13px;
+}
+body{
+	background-color:black;
+       	color:white;
+	}
+a{
+       	color:lime;
+	}
+a:visited{
+       	color:lime;
+	}
+a:active{
+	color:red;
+	}
+/* a:hover = ハイパーリンクをつけているアンカータグ（<a>）にマウスカーソルが載ったときの色の指定 */
+a:hover{
+	color:red;
+	}
+
+
+
+
